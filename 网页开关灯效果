@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: grey;
+        }
+
+        .butt {
+            float: right;
+            width: 60px;
+            height: 30px;
+            margin: 30px 30px;
+            background: rgb(152, 233, 253);
+            outline: none;
+            border: none;
+            border-radius: 12px;
+            /* color: black; */
+        }
+    </style>
+</head>
+
+<body class="box">
+    <button class="butt">开 关</button>
+
+    <script>
+        // 1.获取事件
+        var box = document.querySelector('.box');
+        var butt = document.querySelector('.butt');
+        // 2.注册事件 处理事件
+        var flag = 0;
+        butt.onclick = function () {
+            if (flag == 0) {
+                box.style.backgroundColor = 'black';
+                flag = 1;
+            } else {
+                box.style.backgroundColor = 'grey';
+                flag = 0;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
